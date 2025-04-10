@@ -33,7 +33,33 @@ export class Stock implements Ticker {
     }
 
     private updatePrice() {
-        this.price += 1
+
+    private updateVolume() {
+
+    }
+
+    private updateOpen() {
+        
+    }
+
+    private updateToday() {
+
+    }
+
+    private updateWeekPrice() {
+
+    }
+
+    private updatePERatio() {
+
+    }
+
+    private updateMarketCap() {
+
+    }
+
+    private updateDivYield() {
+        
     }
 
     update(): void {
