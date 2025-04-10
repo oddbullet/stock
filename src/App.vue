@@ -4,6 +4,7 @@ import { Game } from './game';
 const game: Game = new Game()
 game.initialize()
 
+// This would be a setInterval.
 for (let index = 0; index < 100; index++) {
     game.update()
 }
