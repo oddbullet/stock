@@ -1,6 +1,6 @@
 [
     {
-        "ticketName": "YAN",
+        "ticket_name": "YAN",
         "price": 12.00,
         "volume": "128.01M",
         "average_volume": "60.00M",
@@ -15,7 +15,7 @@
         "div_yield": 0.04
     },
     {
-        "ticketName": "BLU",
+        "ticket_name": "BLU",
         "price": 51.85,
         "volume": "30.15M",
         "average_volume": "25.50M",
@@ -30,7 +30,7 @@
         "div_yield": 0.015
     },
     {
-        "ticketName": "GRN",
+        "ticket_name": "GRN",
         "price": 8.25,
         "volume": "4.95M",
         "average_volume": "5.20M",
@@ -45,7 +45,7 @@
         "div_yield": 0.00
     },
     {
-        "ticketName": "RDX",
+        "ticket_name": "RDX",
         "price": 292.10,
         "volume": "12.80M",
         "average_volume": "10.50M",
@@ -60,7 +60,7 @@
         "div_yield": 0.005
     },
     {
-        "ticketName": "SILV",
+        "ticket_name": "SILV",
         "price": 1.28,
         "volume": "95.20M",
         "average_volume": "80.50M",
@@ -75,7 +75,7 @@
         "div_yield": 0.00
     },
     {
-        "ticketName": "TECH",
+        "ticket_name": "TECH",
         "price": 450.75,
         "volume": "55.6M",
         "average_volume": "48.2M",
