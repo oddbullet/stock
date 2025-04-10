@@ -2,6 +2,7 @@ export interface Ticker {
     readonly ticket_name: string;
     price: number;
     volume: number;
+    average_volume: number;
     overnight_volume: number;
     open: number;
     today_high: number;

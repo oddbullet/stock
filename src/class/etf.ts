@@ -4,6 +4,7 @@ export class Etf implements Ticker {
     ticket_name: string;
     price: number;
     volume: number;
+    average_volume: number;
     overnight_volume: number;
     open: number;
     today_high: number;
@@ -19,6 +20,7 @@ export class Etf implements Ticker {
         ticket_name: string,
         price: number,
         volume: number,
+        average_volume: number,
         overnight_volume: number,
         open: number,
         today_high: number,
@@ -32,6 +34,7 @@ export class Etf implements Ticker {
             this.ticket_name = ticket_name
             this.price = price
             this.volume = volume
+            this.average_volume = average_volume
             this.overnight_volume = overnight_volume
             this.open = open
             this.today_high = today_high
