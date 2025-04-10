@@ -34,6 +34,10 @@ export class Etf implements Ticker {
             this.day_ratio_30 = etfData.day_ratio_30
     }
 
+    updatePrice(): void {
+        throw new Error("Method not implemented.");
+    }
+
     update(): void {
         throw new Error("Method not implemented.");
     }

@@ -1,3 +1,7 @@
+
+/*
+
+*/
 export interface Ticker {
     readonly ticket_name: string;
     price: number;

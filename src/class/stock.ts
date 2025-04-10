@@ -32,7 +32,8 @@ export class Stock implements Ticker {
             this.div_yield = stockData.div_yield
     }
 
-    private updatePrice() {
+    // TODO: Improve in the future
+    private updatePrice(): void {
         const num = Math.floor(Math.random() * 3) + 1 + Math.random()
         const total = Math.round((num + Number.EPSILON) * 100) /100
 
@@ -44,31 +45,31 @@ export class Stock implements Ticker {
     }
 
     private updateVolume() {
-
+        throw new Error("Method not implemented.");
     }
 
     private updateOpen() {
-
+        throw new Error("Method not implemented.");
     }
 
     private updateToday() {
-
+        throw new Error("Method not implemented.");
     }
 
     private updateWeekPrice() {
-
+        throw new Error("Method not implemented.");
     }
 
     private updatePERatio() {
-
+        throw new Error("Method not implemented.");
     }
 
     private updateMarketCap() {
-
+        throw new Error("Method not implemented.");
     }
 
     private updateDivYield() {
-        
+        throw new Error("Method not implemented.");
     }
 
     update(): void {
