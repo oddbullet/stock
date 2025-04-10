@@ -11,6 +11,8 @@ export class Stock implements Ticker {
     week_high_52: number;
     week_low_52: number;
     pe_ratio: number;
+    market_cap: number;
+    div_yield: number;
 
     constructor(
         ticket_name: string,
@@ -22,7 +24,9 @@ export class Stock implements Ticker {
         today_low: number,
         week_high_52: number,
         week_low_52: number,
-        pe_ratio: number){
+        pe_ratio: number,
+        market_cap: number,
+        div_yield: number){
             this.ticket_name = ticket_name;
             this.price = price
             this.volume = volume
@@ -33,6 +37,8 @@ export class Stock implements Ticker {
             this.week_high_52 = week_high_52
             this.week_low_52 = week_low_52
             this.pe_ratio = pe_ratio
+            this.market_cap = market_cap
+            this.div_yield = div_yield
     }
 
     updatePrice() {
