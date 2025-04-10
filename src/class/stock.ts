@@ -33,13 +33,22 @@ export class Stock implements Ticker {
     }
 
     private updatePrice() {
+        const num = Math.floor(Math.random() * 3) + 1 + Math.random()
+        const total = Math.round((num + Number.EPSILON) * 100) /100
+
+        if(Math.random() > 0.4) {
+            this.price += total
+        } else {
+            this.price -= total
+        }
+    }
 
     private updateVolume() {
 
     }
 
     private updateOpen() {
-        
+
     }
 
     private updateToday() {
