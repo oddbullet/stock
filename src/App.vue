@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import { Stock } from './class/stock';
-import { StockData } from './class/stockData';
+import { Game } from './game';
 
-let y: StockData = new StockData("B", 1.11, 12, 12, 12,12, 12, 12, 12, 12, 12, 12, 12)
-
-let x: Stock = new Stock(y)
+const game: Game = new Game()
+game.initialize()
 
 for (let index = 0; index < 100; index++) {
-    x.update()
+    game.update()
 }
 
 </script>
