@@ -1,19 +1,20 @@
 import type { Ticker } from "../interface/ticker";
 import type { StockData } from "./stockData";
 
+// Look into interface inheritance for data
 export class Stock implements Ticker {
     ticket_name: string;
     price: number;
-    volume: number;
-    average_volume: number;
-    overnight_volume: number;
+    volume: string;
+    average_volume: string;
+    overnight_volume: string;
     open: number;
     today_high: number;
     today_low: number;
     week_high_52: number;
     week_low_52: number;
     pe_ratio: number;
-    market_cap: number;
+    market_cap: string;
     div_yield: number;
 
     constructor(stockData: StockData){
@@ -74,7 +75,6 @@ export class Stock implements Ticker {
 
     update(): void {
         this.updatePrice()
-        console.log(this.price)
     }
 }
 
