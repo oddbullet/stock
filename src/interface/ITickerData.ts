@@ -1,5 +1,8 @@
-export interface StockData {
-    ticket_name: string;
+/*
+
+*/
+export interface ITickerData {
+    readonly ticket_name: string;
     price: number;
     volume: string;
     average_volume: string;
@@ -10,6 +13,4 @@ export interface StockData {
     week_high_52: number;
     week_low_52: number;
     pe_ratio: number;
-    market_cap: string;
-    div_yield: number;
 }

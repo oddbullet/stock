@@ -1,9 +1,10 @@
 import { loadStock } from "./function/loader"
-import type { Ticker } from "./interface/ticker"
+import type { ITicker } from "./interface/ITicker"
+import type { ITickerData } from "./interface/ITickerData";
 
 
 export class Game {
-    GlobalObject: Ticker[] = []
+    GlobalObject: ITicker<ITickerData>[] = []
 
     constructor(){}
 
@@ -13,7 +14,7 @@ export class Game {
     
     update() {
         this.GlobalObject.forEach(function(ticker) {
-            console.log(ticker.ticket_name)
+            console.log(ticker.tickerData.ticket_name)
             ticker.update()
         });
     }
