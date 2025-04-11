@@ -19,3 +19,7 @@ export function loadStock(): Stock[] {
 export function loadETF() {
     throw new Error("Not Implemented")
 }
+
+export function loadPlayer() {
+    throw new Error("Not Implmented")
+}
