@@ -1,8 +1,7 @@
-
 /*
 
 */
-export interface Ticker {
+export interface ITickerData {
     readonly ticket_name: string;
     price: number;
     volume: string;
@@ -14,6 +13,4 @@ export interface Ticker {
     week_high_52: number;
     week_low_52: number;
     pe_ratio: number;
-
-    update(): void;
 }
