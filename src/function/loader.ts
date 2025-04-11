@@ -1,5 +1,5 @@
 import { Stock } from "../class/stock";
-import type { StockData } from "../class/stockData";
+import type { StockData } from "../interface/IStockData";
 import stockData from "../data/stock/stock.json";
 
 export function loadStock(): Stock[] {
