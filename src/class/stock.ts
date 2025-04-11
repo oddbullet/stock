@@ -1,36 +1,11 @@
-import type { Ticker } from "../interface/ticker";
-import type { StockData } from "./stockData";
+import type { ITicker } from "../interface/ITicker";
+import type { IStockData } from "../interface/IStockData";
 
-// Look into interface inheritance for data
-export class Stock implements Ticker {
-    ticket_name: string;
-    price: number;
-    volume: string;
-    average_volume: string;
-    overnight_volume: string;
-    open: number;
-    today_high: number;
-    today_low: number;
-    week_high_52: number;
-    week_low_52: number;
-    pe_ratio: number;
-    market_cap: string;
-    div_yield: number;
+export class Stock implements ITicker<IStockData> {
+    tickerData: IStockData
 
-    constructor(stockData: StockData){
-            this.ticket_name = stockData.ticket_name;
-            this.price = stockData.price
-            this.volume = stockData.volume
-            this.average_volume = stockData.average_volume
-            this.overnight_volume = stockData.overnight_volume
-            this.open = stockData.open
-            this.today_high = stockData.today_high
-            this.today_low = stockData.today_low
-            this.week_high_52 = stockData.week_high_52
-            this.week_low_52 = stockData.week_low_52
-            this.pe_ratio = stockData.pe_ratio
-            this.market_cap = stockData.market_cap
-            this.div_yield = stockData.div_yield
+    constructor(stockData: IStockData){
+            this.tickerData = stockData
     }
 
     // TODO: Improve in the future
@@ -39,9 +14,9 @@ export class Stock implements Ticker {
         const total = Math.round((num + Number.EPSILON) * 100) /100
 
         if(Math.random() > 0.4) {
-            this.price += total
+            this.tickerData.price += total
         } else {
-            this.price -= total
+            this.tickerData.price -= total
         }
     }
 
