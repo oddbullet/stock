@@ -1,14 +1,14 @@
 import { Stock } from "../class/stock";
-import type { StockData } from "../interface/IStockData";
+import type { IStockData } from "../interface/IStockData";
 import stockData from "../data/stock/stock.json";
 
 export function loadStock(): Stock[] {
 
-    const jsonFile: StockData[] = stockData
+    const jsonFile: IStockData[] = stockData
     const stocks: Stock[] = []
 
 
-    jsonFile.forEach(function(stockData: StockData) {
+    jsonFile.forEach(function(stockData: IStockData) {
         const stock: Stock = new Stock(stockData)
         stocks.push(stock)
     })
