@@ -1,19 +1,16 @@
-interface BoughtStockData {
-    readonly ticket_name: string
-    number_share: number
-    total_value: number
-}
+import type { IBoughtStock } from "../interface/IBoughtStock"
+import type { ISellStock } from "../interface/ISellStock"
 
 export class Portfolio {
     buying_power: number
     total_value: number
 
-    stocks: BoughtStockData[]
+    stocks: {[key: string]: IBoughtStock }
 
     constructor() {
         this.buying_power = 0
         this.total_value = 0
-        this.stocks = []
+        this.stocks = {}
     }
 
     updateBuyingPower(): void {
@@ -21,14 +18,26 @@ export class Portfolio {
     }
 
     private updateTotalValue(): void {
-        throw new Error("Not Implemented")
+        Object.values(this.stocks).forEach((stock) => {
+            this.total_value += stock.number_share * this.getStockPrice(stock.ticket_name)
+        })
     }
 
-    buyStock(): void {
-        throw new Error("Not Implemented")
+    buyStock(stock: IBoughtStock): void {
+        const ticketName = stock.ticket_name
+        if (this.stocks[ticketName] === null) {
+            this.stocks[ticketName] = stock
+        } else {
+            this.stocks[ticketName].number_share += stock.number_share
+        }
     }
 
-    sellStock() {
+    sellStock(stock: ISellStock): void {
+        this.stocks[stock.ticket_name]
+
+    }
+
+    getStockPrice(ticketName: string): number {
         throw new Error("Not Implemented")
     }
 }
