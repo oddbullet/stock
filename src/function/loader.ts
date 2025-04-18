@@ -1,6 +1,12 @@
 import { Stock } from "../class/stock";
 import type { IStockData } from "../interface/IStockData";
 import stockData from "../data/stock/stock.json";
+import { Market } from "../class/market";
+
+
+export function loadMarket(): Market {
+    return new Market(loadStock())
+}
 
 export function loadStock(): Stock[] {
 
