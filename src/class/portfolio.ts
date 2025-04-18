@@ -33,8 +33,7 @@ export class Portfolio {
     }
 
     sellStock(stock: ISellStock): void {
-        this.stocks[stock.ticket_name]
-
+        throw new Error("Not Implemented")
     }
 
     getStockPrice(ticketName: string): number {
