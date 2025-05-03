@@ -1,4 +1,4 @@
-import { loadMarket, loadStock } from "./function/loader"
+import { loadMarket } from "./function/loader"
 import type { IGameObject } from "./interface/IGameObject";
 
 

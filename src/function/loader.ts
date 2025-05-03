@@ -5,7 +5,7 @@ import { Market } from "../class/market";
 
 
 export function loadMarket(): Market {
-    return new Market(loadStock())
+    return Market.instance
 }
 
 export function loadStock(): Stock[] {
