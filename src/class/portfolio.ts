@@ -1,9 +1,11 @@
 import type { IBoughtStock } from "../interface/IBoughtStock"
 import type { ISellStock } from "../interface/ISellStock"
+import { Market } from "./market"
 
 export class Portfolio {
     buying_power: number
     total_value: number
+    market: Market
 
     stocks: {[key: string]: IBoughtStock }
 
@@ -11,6 +13,7 @@ export class Portfolio {
         this.buying_power = 0
         this.total_value = 0
         this.stocks = {}
+        this.market = Market.instance
     }
 
     updateBuyingPower(): void {
